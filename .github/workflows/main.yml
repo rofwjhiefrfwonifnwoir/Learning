@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    timeout-minutes: 60
+    timeout-minutes: 360
 
     steps:
       - name: Setup Environment & Dependencies
@@ -119,7 +119,7 @@ jobs:
         run: |
           Write-Host "=== CI in progress ==="
           $interval = 300
-          $duration = 58 * 60
+          $duration = 355 * 60
           $end = (Get-Date).AddSeconds($duration)
 
           while ((Get-Date) -lt $end) {
